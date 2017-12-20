@@ -1,4 +1,4 @@
-function varargout = SMRTool(varargin)
+function varargout = SMRTool_v205(varargin)
 %    Copyright (C) {2015}  {Adrián Riquelme Guill, adririquelme@gmail.com}
 %
 %    This program is free software; you can redistribute it and/or modify
@@ -14,41 +14,41 @@ function varargout = SMRTool(varargin)
 %    You should have received a copy of the GNU General Public License along
 %   with this program; if not, write to the Free Software Foundation, Inc.,
 %   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
-%    SMRTool, Copyright (C) 2015 Adrián Riquelme Guill
-%    SMRTool comes with ABSOLUTELY NO WARRANTY.
+%    SMRTool_v205, Copyright (C) 2015 Adrián Riquelme Guill
+%    SMRTool_v205 comes with ABSOLUTELY NO WARRANTY.
 %    This is free software, and you are welcome to redistribute it
 %    under certain conditions.
-% SMRTOOL MATLAB code for SMRTool.fig
-%      SMRTOOL, by itself, creates a new SMRTOOL or raises the existing
+% SMRTOOL_V205 MATLAB code for SMRTool_v205.fig
+%      SMRTOOL_V205, by itself, creates a new SMRTOOL_V205 or raises the existing
 %      singleton*.
 %
-%      H = SMRTOOL returns the handle to a new SMRTOOL or the handle to
+%      H = SMRTOOL_V205 returns the handle to a new SMRTOOL_V205 or the handle to
 %      the existing singleton*.
 %
-%      SMRTOOL('CALLBACK',hObject,eventData,handles,...) calls the local
-%      function named CALLBACK in SMRTOOL.M with the given input arguments.
+%      SMRTOOL_V205('CALLBACK',hObject,eventData,handles,...) calls the local
+%      function named CALLBACK in SMRTOOL_V205.M with the given input arguments.
 %
-%      SMRTOOL('Property','Value',...) creates a new SMRTOOL or raises the
+%      SMRTOOL_V205('Property','Value',...) creates a new SMRTOOL_V205 or raises the
 %      existing singleton*.  Starting from the left, property value pairs are
-%      applied to the GUI before SMRTool_OpeningFcn gets called.  An
+%      applied to the GUI before SMRTool_v205_OpeningFcn gets called.  An
 %      unrecognized property name or invalid value makes property application
-%      stop.  All inputs are passed to SMRTool_OpeningFcn via varargin.
+%      stop.  All inputs are passed to SMRTool_v205_OpeningFcn via varargin.
 %
 %      *See GUI Options on GUIDE's Tools menu.  Choose "GUI allows only one
 %      instance to run (singleton)".
 %
 % See also: GUIDE, GUIDATA, GUIHANDLES
 
-% Edit the above text to modify the response to help SMRTool
+% Edit the above text to modify the response to help SMRTool_v205
 
-% Last Modified by GUIDE v2.5 29-Mar-2015 16:33:02
+% Last Modified by GUIDE v2.5 13-Oct-2016 15:24:56
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
 gui_State = struct('gui_Name',       mfilename, ...
                    'gui_Singleton',  gui_Singleton, ...
-                   'gui_OpeningFcn', @SMRTool_OpeningFcn, ...
-                   'gui_OutputFcn',  @SMRTool_OutputFcn, ...
+                   'gui_OpeningFcn', @SMRTool_v205_OpeningFcn, ...
+                   'gui_OutputFcn',  @SMRTool_v205_OutputFcn, ...
                    'gui_LayoutFcn',  [] , ...
                    'gui_Callback',   []);
 if nargin && ischar(varargin{1})
@@ -63,15 +63,15 @@ end
 % End initialization code - DO NOT EDIT
 
 
-% --- Executes just before SMRTool is made visible.
-function SMRTool_OpeningFcn(hObject, eventdata, handles, varargin)
+% --- Executes just before SMRTool_v205 is made visible.
+function SMRTool_v205_OpeningFcn(hObject, eventdata, handles, varargin)
 % This function has no output args, see OutputFcn.
 % hObject    handle to figure
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
-% varargin   command line arguments to SMRTool (see VARARGIN)
+% varargin   command line arguments to SMRTool_v205 (see VARARGIN)
 
-% Choose default command line output for SMRTool
+% Choose default command line output for SMRTool_v205
 handles.output = hObject;
 
 % cargo las imágenes
@@ -86,12 +86,12 @@ set(handles.pushbutton_movedown,'cdata',A);
 % Update handles structure
 guidata(hObject, handles);
 
-% UIWAIT makes SMRTool wait for user response (see UIRESUME)
+% UIWAIT makes SMRTool_v205 wait for user response (see UIRESUME)
 % uiwait(handles.figure1);
 
 
 % --- Outputs from this function are returned to the command line.
-function varargout = SMRTool_OutputFcn(hObject, eventdata, handles) 
+function varargout = SMRTool_v205_OutputFcn(hObject, eventdata, handles) 
 % varargout  cell array for returning output args (see VARARGOUT);
 % hObject    handle to figure
 % eventdata  reserved - to be defined in a future version of MATLAB
@@ -540,11 +540,11 @@ function dibujadipdirections_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 % Primero tomo los datos
 alphas = str2double(get(handles.box_alphas,'String'));
-alphaj=str2double(get(handles.box_alphaj,'String'));
+alphaj = str2double(get(handles.box_alphaj,'String'));
 % dibujo el círculo
 theta = 0:0.01:2*pi;
 rho = zeros(size(theta));
-rho(:) = 1;
+rho(:) = 1; % Hago el círculo de radio unidad
 % dibujamos la figura
 cla(handles.axes1,'reset'); %limpio primero la casa
 polar(handles.axes1,theta,rho,'--r');
@@ -570,9 +570,10 @@ end
 title(handles.axes1,'Dip directions');
 hold on;
 % dibujo el talud
+% Xs=[0 cos(pi/2-alphas/180*pi) -cos(alphas/180*pi) cos(alphas/180*pi)];
+% Ys=[0 sin(pi/2-alphas/180*pi) -sin(alphas/180*pi) sin(alphas/180*pi)];
 Xs=[0 cos(pi/2-alphas/180*pi)];
 Ys=[0 sin(pi/2-alphas/180*pi)];
-% plot(X,Y,'LineWidth',1.5,'Color','g');
 % dibujo la discontinuidad
 Xj=[0 cos(pi/2-alphaj/180*pi)];
 Yj=[0 sin(pi/2-alphaj/180*pi)];

@@ -1,0 +1,13 @@
+alphas=192;
+alphaj=76;
+a1=alphas+90;
+a2=alphas-90;
+a3=alphaj+90;
+a4=alphaj-90;
+v=[a1 a2 a3 a4];
+v=sort(v);
+v1=v(2)-v(1);
+v2=v(3)-v(2);
+v3=v(4)-v(3);
+vaux=[v1 v2 v3];
+A=min(vaux);
