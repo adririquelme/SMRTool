@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2016.11.15)  2 MAY 2017 12:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2016.11.15)  20 DEC 2017 13:04
 entering extended mode
 **./Report.tex
 (Report.tex
@@ -942,7 +942,7 @@ LaTeX Font Info:    Try loading font information for U+lasy on input line 14.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ulasy.fd"
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-Overfull \hbox (68.39998pt too wide) in paragraph at lines 14--24
+Overfull \hbox (64.39998pt too wide) in paragraph at lines 14--23
  [] 
  []
 
@@ -950,7 +950,7 @@ Overfull \hbox (68.39998pt too wide) in paragraph at lines 14--24
 Here is how much of TeX's memory you used:
  3910 strings out of 493333
  48258 string characters out of 3139193
- 111082 words of memory out of 3000000
+ 110082 words of memory out of 3000000
  7324 multiletter control sequences out of 15000+200000
  22588 words of font info for 62 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -960,7 +960,7 @@ am Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/MiKTeX 2.9/fo
 nts/type1/public/txfonts/rtxr.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
 ic/txfonts/txsy.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.p
 fb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Report.pdf (1 page, 22984 bytes).
+Output written on Report.pdf (1 page, 23099 bytes).
 PDF statistics:
  23 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

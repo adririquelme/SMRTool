@@ -1,0 +1,157 @@
+<deployment-project plugin="plugin.ezdeploy" plugin-version="1.0">
+  <configuration build-checksum="3845069266" file="D:\Users\Adri\Google\Github\SMRTool\SMRTool.prj" location="D:\Users\Adri\Google\Github\SMRTool" name="SMRTool" preferred-package-location="D:\adrir\Google Drive\Github\SMRTool\SMRTool\for_redistribution" preferred-package-type="package.type.exe" target="target.ezdeploy.standalone" target-name="Application Compiler">
+    <param.appname>SMRTool</param.appname>
+    <param.icon />
+    <param.icons />
+    <param.version>2.07</param.version>
+    <param.authnamewatermark>SMRTool</param.authnamewatermark>
+    <param.email>ariquelme@ua.es</param.email>
+    <param.company>University of Alicante</param.company>
+    <param.summary>SMRTool v 2.07</param.summary>
+    <param.description>A tool for the calculation of the Slope Mass Rating index.</param.description>
+    <param.screenshot>${PROJECT_ROOT}\img\SMRTool_logo_v02.png</param.screenshot>
+    <param.guid />
+    <param.installpath.string>\University of Alicante\SMRTool\</param.installpath.string>
+    <param.installpath.combo>option.installpath.programfiles</param.installpath.combo>
+    <param.logo />
+    <param.install.notes />
+    <param.target.install.notes />
+    <param.intermediate>${PROJECT_ROOT}\SMRTool\for_testing</param.intermediate>
+    <param.files.only>${PROJECT_ROOT}\SMRTool\for_redistribution_files_only</param.files.only>
+    <param.output>${PROJECT_ROOT}\SMRTool\for_redistribution</param.output>
+    <param.logdir>${PROJECT_ROOT}\SMRTool</param.logdir>
+    <param.enable.clean.build>false</param.enable.clean.build>
+    <param.user.defined.mcr.options />
+    <param.target.type>subtarget.standalone</param.target.type>
+    <param.support.packages />
+    <param.web.mcr>true</param.web.mcr>
+    <param.package.mcr>false</param.package.mcr>
+    <param.no.mcr>false</param.no.mcr>
+    <param.web.mcr.name>SMRTool207</param.web.mcr.name>
+    <param.package.mcr.name>MyAppInstaller_mcr</param.package.mcr.name>
+    <param.no.mcr.name>MyAppInstaller_app</param.no.mcr.name>
+    <param.windows.command.prompt>true</param.windows.command.prompt>
+    <param.create.log>false</param.create.log>
+    <param.log.file />
+    <param.native.matlab>false</param.native.matlab>
+    <param.checkbox>false</param.checkbox>
+    <param.example />
+    <param.help.text />
+    <unset>
+      <param.icon />
+      <param.icons />
+      <param.company />
+      <param.guid />
+      <param.installpath.string />
+      <param.installpath.combo />
+      <param.logo />
+      <param.target.install.notes />
+      <param.intermediate />
+      <param.files.only />
+      <param.output />
+      <param.logdir />
+      <param.enable.clean.build />
+      <param.user.defined.mcr.options />
+      <param.target.type />
+      <param.support.packages />
+      <param.web.mcr />
+      <param.package.mcr />
+      <param.no.mcr />
+      <param.package.mcr.name />
+      <param.no.mcr.name />
+      <param.windows.command.prompt />
+      <param.create.log />
+      <param.log.file />
+      <param.native.matlab />
+      <param.checkbox />
+      <param.example />
+      <param.help.text />
+    </unset>
+    <fileset.main>
+      <file>${PROJECT_ROOT}\SMRTool_v207.m</file>
+    </fileset.main>
+    <fileset.resources>
+      <file>${PROJECT_ROOT}\img</file>
+    </fileset.resources>
+    <fileset.package />
+    <fileset.depfun>
+      <file>${PROJECT_ROOT}\f_Acoeff1.m</file>
+      <file>${PROJECT_ROOT}\f_calculatewedge.m</file>
+      <file>${PROJECT_ROOT}\f_Ccoeff3.m</file>
+      <file>${PROJECT_ROOT}\f_classsmr.m</file>
+      <file>${PROJECT_ROOT}\f_coeff1.m</file>
+      <file>${PROJECT_ROOT}\f_coeff1tomas.m</file>
+      <file>${PROJECT_ROOT}\f_coeff2.m</file>
+      <file>${PROJECT_ROOT}\f_coeff2tomas.m</file>
+      <file>${PROJECT_ROOT}\f_coeff3.m</file>
+      <file>${PROJECT_ROOT}\f_coeff3tomas.m</file>
+      <file>${PROJECT_ROOT}\f_tiporotura.m</file>
+      <file>${PROJECT_ROOT}\gui_about.m</file>
+      <file>${PROJECT_ROOT}\gui_wedgescalculator.m</file>
+      <file>${PROJECT_ROOT}\Report.tex</file>
+      <file>${PROJECT_ROOT}\swap.m</file>
+    </fileset.depfun>
+    <build-deliverables>
+      <file location="${PROJECT_ROOT}\SMRTool\for_testing" name="SMRTool.exe" optional="false">D:\Users\Adri\Google\Github\SMRTool\SMRTool\for_testing\SMRTool.exe</file>
+      <file location="${PROJECT_ROOT}\SMRTool\for_testing" name="splash.png" optional="false">D:\Users\Adri\Google\Github\SMRTool\SMRTool\for_testing\splash.png</file>
+      <file location="${PROJECT_ROOT}\SMRTool\for_testing" name="readme.txt" optional="true">D:\Users\Adri\Google\Github\SMRTool\SMRTool\for_testing\readme.txt</file>
+    </build-deliverables>
+    <workflow />
+    <matlab>
+      <root>C:\Program Files\MATLAB\R2017b</root>
+      <toolboxes>
+        <toolbox name="fixedpoint" />
+        <toolbox name="matlabcoder" />
+        <toolbox name="matlabhdlcoder" />
+        <toolbox name="embeddedcoder" />
+        <toolbox name="gpucoder" />
+        <toolbox name="polyspacebugfinder" />
+      </toolboxes>
+      <toolbox>
+        <fixedpoint>
+          <enabled>true</enabled>
+        </fixedpoint>
+      </toolbox>
+      <toolbox>
+        <matlabcoder>
+          <enabled>true</enabled>
+        </matlabcoder>
+      </toolbox>
+      <toolbox>
+        <matlabhdlcoder>
+          <enabled>true</enabled>
+        </matlabhdlcoder>
+      </toolbox>
+      <toolbox>
+        <embeddedcoder>
+          <enabled>true</enabled>
+        </embeddedcoder>
+      </toolbox>
+      <toolbox>
+        <gpucoder>
+          <enabled>true</enabled>
+        </gpucoder>
+      </toolbox>
+      <toolbox>
+        <polyspacebugfinder>
+          <enabled>true</enabled>
+        </polyspacebugfinder>
+      </toolbox>
+    </matlab>
+    <platform>
+      <unix>false</unix>
+      <mac>false</mac>
+      <windows>true</windows>
+      <win2k>false</win2k>
+      <winxp>false</winxp>
+      <vista>false</vista>
+      <linux>false</linux>
+      <solaris>false</solaris>
+      <osver>10.0</osver>
+      <os32>false</os32>
+      <os64>true</os64>
+      <arch>win64</arch>
+      <matlab>true</matlab>
+    </platform>
+  </configuration>
+</deployment-project>
