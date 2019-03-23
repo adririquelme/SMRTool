@@ -41,7 +41,7 @@ function varargout = SMRTool_v207_win(varargin)
 
 % Edit the above text to modify the response to help SMRTool_v207_win
 
-% Last Modified by GUIDE v2.5 20-Mar-2019 10:14:42
+% Last Modified by GUIDE v2.5 23-Mar-2019 19:31:45
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -580,8 +580,9 @@ Yj=[0 sin(pi/2-alphaj/180*pi)];
 g=plot(handles.axes1,Xs,Ys,Xj,Yj);
 set(g(1),'LineWidth',1.5);
 set(g(2),'LineWidth',1.5);
-hleg1 = legend(g,'Slope','Discontinuity');
-set(hleg1,'Location','BestOutside','FontSize',10);
+handles.axes1.Title.Visible='on';
+handles.axes1.Title.String=['Dip directions of {\color{blue}slope} and {\color{red}discontinuity}'];
+
 
 function dibujacroquis_Callback(hObject, eventdata, handles)
 % Primero tomo los datos
@@ -618,13 +619,14 @@ else
         Yj = [H/2 0];
     end
 end
-
 % dibujamos la figura
 cla(handles.axes2,'reset'); %limpio primero la casa
 g=plot(handles.axes2,Xs,Ys,Xj,Yj);
 set(g(1),'LineWidth',1.5);
 set(g(2),'LineWidth',1.5);
 axis(handles.axes2,'square','equal');
+handles.axes2.Title.Visible='on';
+handles.axes2.Title.String=['Dip of {\color{blue}slope} and {\color{red}discontinuity}'];
 
 
 % --- Executes on button press in pushbutton_logoua.

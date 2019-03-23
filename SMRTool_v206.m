@@ -1,5 +1,5 @@
-function varargout = SMRTool_v207_mac(varargin)
-%    Copyright (C) {2015}  {Adrin Riquelme Guill, adririquelme@gmail.com}
+function varargout = SMRTool_v206(varargin)
+%    Copyright (C) {2015}  {Adrián Riquelme Guill, adririquelme@gmail.com}
 %
 %    This program is free software; you can redistribute it and/or modify
 %    it under the terms of the GNU General Public License as published by
@@ -14,41 +14,41 @@ function varargout = SMRTool_v207_mac(varargin)
 %    You should have received a copy of the GNU General Public License along
 %   with this program; if not, write to the Free Software Foundation, Inc.,
 %   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
-%    SMRTool_v207_mac, Copyright (C) 2015 Adrin Riquelme Guill
-%    SMRTool_v207_mac comes with ABSOLUTELY NO WARRANTY.
+%    SMRTool_v206, Copyright (C) 2015 Adrián Riquelme Guill
+%    SMRTool_v206 comes with ABSOLUTELY NO WARRANTY.
 %    This is free software, and you are welcome to redistribute it
 %    under certain conditions.
-% SMRTOOL_V207_MAC MATLAB code for SMRTool_v207_mac.fig
-%      SMRTOOL_V207_MAC, by itself, creates a new SMRTOOL_V207_MAC or raises the existing
+% SMRTOOL_V206 MATLAB code for SMRTool_v206.fig
+%      SMRTOOL_V206, by itself, creates a new SMRTOOL_V206 or raises the existing
 %      singleton*.
 %
-%      H = SMRTOOL_V207_MAC returns the handle to a new SMRTOOL_V207_MAC or the handle to
+%      H = SMRTOOL_V206 returns the handle to a new SMRTOOL_V206 or the handle to
 %      the existing singleton*.
 %
-%      SMRTOOL_V207_MAC('CALLBACK',hObject,eventData,handles,...) calls the local
-%      function named CALLBACK in SMRTOOL_V207_MAC.M with the given input arguments.
+%      SMRTOOL_V206('CALLBACK',hObject,eventData,handles,...) calls the local
+%      function named CALLBACK in SMRTOOL_V206.M with the given input arguments.
 %
-%      SMRTOOL_V207_MAC('Property','Value',...) creates a new SMRTOOL_V207_MAC or raises the
+%      SMRTOOL_V206('Property','Value',...) creates a new SMRTOOL_V206 or raises the
 %      existing singleton*.  Starting from the left, property value pairs are
-%      applied to the GUI before SMRTool_v207_mac_OpeningFcn gets called.  An
+%      applied to the GUI before SMRTool_v206_OpeningFcn gets called.  An
 %      unrecognized property name or invalid value makes property application
-%      stop.  All inputs are passed to SMRTool_v207_mac_OpeningFcn via varargin.
+%      stop.  All inputs are passed to SMRTool_v206_OpeningFcn via varargin.
 %
 %      *See GUI Options on GUIDE's Tools menu.  Choose "GUI allows only one
 %      instance to run (singleton)".
 %
 % See also: GUIDE, GUIDATA, GUIHANDLES
 
-% Edit the above text to modify the response to help SMRTool_v207_mac
+% Edit the above text to modify the response to help SMRTool_v206
 
-% Last Modified by GUIDE v2.5 18-Mar-2019 14:58:53
+% Last Modified by GUIDE v2.5 19-Jan-2018 11:25:17
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
 gui_State = struct('gui_Name',       mfilename, ...
                    'gui_Singleton',  gui_Singleton, ...
-                   'gui_OpeningFcn', @SMRTool_v207_mac_OpeningFcn, ...
-                   'gui_OutputFcn',  @SMRTool_v207_mac_OutputFcn, ...
+                   'gui_OpeningFcn', @SMRTool_v206_OpeningFcn, ...
+                   'gui_OutputFcn',  @SMRTool_v206_OutputFcn, ...
                    'gui_LayoutFcn',  [] , ...
                    'gui_Callback',   []);
 if nargin && ischar(varargin{1})
@@ -63,18 +63,18 @@ end
 % End initialization code - DO NOT EDIT
 
 
-% --- Executes just before SMRTool_v207_mac is made visible.
-function SMRTool_v207_mac_OpeningFcn(hObject, eventdata, handles, varargin)
+% --- Executes just before SMRTool_v206 is made visible.
+function SMRTool_v206_OpeningFcn(hObject, eventdata, handles, varargin)
 % This function has no output args, see OutputFcn.
 % hObject    handle to figure
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
-% varargin   command line arguments to SMRTool_v207_mac (see VARARGIN)
+% varargin   command line arguments to SMRTool_v206 (see VARARGIN)
 
-% Choose default command line output for SMRTool_v207_mac
+% Choose default command line output for SMRTool_v206
 handles.output = hObject;
 
-% cargo las imgenes
+% cargo las imágenes
 A = imread('img/insert','bmp');
 set(handles.pushbutton_addplane,'cdata',A);
 A = imread('img/delete','bmp');
@@ -86,12 +86,12 @@ set(handles.pushbutton_movedown,'cdata',A);
 % Update handles structure
 guidata(hObject, handles);
 
-% UIWAIT makes SMRTool_v207_mac wait for user response (see UIRESUME)
+% UIWAIT makes SMRTool_v206 wait for user response (see UIRESUME)
 % uiwait(handles.figure1);
 
 
 % --- Outputs from this function are returned to the command line.
-function varargout = SMRTool_v207_mac_OutputFcn(hObject, eventdata, handles) 
+function varargout = SMRTool_v206_OutputFcn(hObject, eventdata, handles) 
 % varargout  cell array for returning output args (see VARARGOUT);
 % hObject    handle to figure
 % eventdata  reserved - to be defined in a future version of MATLAB
@@ -442,7 +442,7 @@ alphas = str2double(get(handles.box_alphas,'String'));
 betas =str2double(get(handles.box_betas,'String'));
 alphaj=str2double(get(handles.box_alphaj,'String'));
 betaj = str2double(get(handles.box_betaj,'String'));
-% calculo los ngulos auxiliares
+% calculo los ángulos auxiliares
 [ Acoeff1 ] = f_Acoeff1( alphas, alphaj );
 [ Ccoeff3 ] = f_Ccoeff3( alphas, alphaj, betas,betaj );
 % los pongo en las casillas que toquen
@@ -478,7 +478,7 @@ SMRTomas = max(0,floor(RMRb + coeff1tomas * coeff2tomas * coeff3tomas + coeff4))
 SMRTomas = min(SMRTomas, 100);
 set(handles.box_SMRRomana,'String',num2str(SMRRomana));
 set(handles.box_SMRTomas,'String',num2str(SMRTomas));
-% calculo la clasificacin para cada uno
+% calculo la clasificación para cada uno
 [ classsmr, description, stability, failures, support ] = f_classsmr( SMRRomana);
 set(handles.box_classromana,'String',classsmr);
 set(handles.box_descriptionromana,'String',description);
@@ -491,7 +491,7 @@ set(handles.box_descriptiontomas,'String',description);
 set(handles.box_stabilitytomas,'String',stability);
 set(handles.box_failurestomas,'String',failures);
 set(handles.box_supporttomas,'String',support);
-% dibujo los grficos
+% dibujo los gráficos
 dibujadipdirections_Callback(hObject, eventdata, handles);
 dibujacroquis_Callback(hObject, eventdata, handles);
 
@@ -541,10 +541,10 @@ function dibujadipdirections_Callback(hObject, eventdata, handles)
 % Primero tomo los datos
 alphas = str2double(get(handles.box_alphas,'String'));
 alphaj = str2double(get(handles.box_alphaj,'String'));
-% dibujo el crculo
+% dibujo el círculo
 theta = 0:0.01:2*pi;
 rho = zeros(size(theta));
-rho(:) = 1; % Hago el crculo de radio unidad
+rho(:) = 1; % Hago el círculo de radio unidad
 % dibujamos la figura
 cla(handles.axes1,'reset'); %limpio primero la casa
 polar(handles.axes1,theta,rho,'--r');
@@ -580,8 +580,8 @@ Yj=[0 sin(pi/2-alphaj/180*pi)];
 g=plot(handles.axes1,Xs,Ys,Xj,Yj);
 set(g(1),'LineWidth',1.5);
 set(g(2),'LineWidth',1.5);
-handles.axes1.Title.Visible='on';
-handles.axes1.Title.String=['Dip directions of {\color{blue}slope} and {\color{red}discontinuity}'];
+hleg1 = legend(g,'Slope','Discontinuity');
+set(hleg1,'Location','BestOutside','FontSize',10);
 
 function dibujacroquis_Callback(hObject, eventdata, handles)
 % Primero tomo los datos
@@ -590,7 +590,7 @@ alphaj=str2double(get(handles.box_alphaj,'String'));
 betas = str2double(get(handles.box_betas,'String'));
 betaj=str2double(get(handles.box_betaj,'String'));
 % determino el talud
-H = 10; % altura de representacin
+H = 10; % altura de representación
 xinterseccion = H/tan(betas*pi/180);
 Xs=[-H/2 0 xinterseccion (xinterseccion+H/2)];
 Ys=[0 0 H H];
@@ -618,14 +618,14 @@ else
         Yj = [H/2 0];
     end
 end
+
 % dibujamos la figura
 cla(handles.axes2,'reset'); %limpio primero la casa
 g=plot(handles.axes2,Xs,Ys,Xj,Yj);
 set(g(1),'LineWidth',1.5);
 set(g(2),'LineWidth',1.5);
 axis(handles.axes2,'square','equal');
-handles.axes2.Title.Visible='on';
-handles.axes2.Title.String=['Dip of {\color{blue}slope} and {\color{red}discontinuity}'];
+
 
 % --- Executes on button press in pushbutton_logoua.
 function pushbutton_logoua_Callback(hObject, eventdata, handles)
@@ -703,7 +703,7 @@ function uipushtool1_ClickedCallback(hObject, eventdata, handles)
 % hObject    handle to uipushtool1 (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
-gui_about_mac;
+gui_about;
 
 
 % --- Executes during object creation, after setting all properties.
@@ -750,7 +750,7 @@ try
     betas = slope(1,2);
     alphaj= planes(idplano,1);
     betaj = planes(idplano,2);
-    % calculo los ngulos auxiliares
+    % calculo los ángulos auxiliares
     % [ Acoeff1 ] = f_Acoeff1( alphas, alphaj );
     % [ Ccoeff3 ] = f_Ccoeff3( alphas, alphaj, betas,betaj );
     % calculo los coeficientes
@@ -778,7 +778,7 @@ function uitable_planes_CellSelectionCallback(hObject, eventdata, handles)
 % eventdata  structure with the following fields (see UITABLE)
 %	Indices: row and column indices of the cell(s) currently selecteds
 % handles    structure with handles and user data (see GUIDATA)
-% guardo la seleccin
+% guardo la selección
 try
 pos=eventdata.Indices(1);
 handles.planoseleccionado = pos;
@@ -796,7 +796,7 @@ function pushbutton_moveup_Callback(hObject, eventdata, handles)
 planes = get(handles.uitable_planes,'Data');
 planoorigen = handles.planoseleccionado;
 [n,~]=size(planes);
-% preparo los ndices de los polos que quiero mover
+% preparo los índices de los polos que quiero mover
 if planoorigen~=1 && n~=1
     planodestino=planoorigen-1;
     [planes]=swap(planes,1,planoorigen,planodestino);
@@ -816,7 +816,7 @@ function pushbutton_movedown_Callback(hObject, eventdata, handles)
 planes = get(handles.uitable_planes,'Data');
 planoorigen = handles.planoseleccionado;
 [n,~]=size(planes);
-% preparo los ndices de los polos que quiero mover
+% preparo los índices de los polos que quiero mover
 if planoorigen~=n && n~=1
     planodestino=planoorigen+1;
     [planes]=swap(planes,1,planoorigen,planodestino);
@@ -858,13 +858,13 @@ try
     % guardo el resultado en la tabla
     set(handles.uitable_planes,'Data',planes);
     
-    % calculo ahora las cuas y sus SMR
+    % calculo ahora las cuñas y sus SMR
     slope = get(handles.uitable_slope,'Data');
     alphas=slope(1,1);
     betas=slope(1,2);
     planes = get(handles.uitable_planes,'Data');
     [nplanos,~]=size(planes);
-    % determino el nmero total de cuas
+    % determino el número total de cuñas
     tamanyo = 0;
     for i=1:(nplanos-1)
         tamanyo = tamanyo +i;
@@ -879,9 +879,9 @@ try
             alphaj2=planes(j,1);
             betaj2=planes(j,2);
             rmrb2=planes(j,3);
-            % calculo la cua
+            % calculo la cuña
             [ w,b, angle, possible ] = f_calculatewedge( alphas, betas, alphaj1, betaj1, alphaj2, betaj2 );
-            % calculo el SMR de la cua
+            % calculo el SMR de la cuña
             [ coeff1 ] = f_coeff1( alphas, w );
             [ coeff2 ] = f_coeff2( alphas, w, b );
             [ coeff3 ] = f_coeff3( alphas, w, betas, b );
@@ -921,7 +921,7 @@ function slider_elementid_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 id=round(get(hObject,'Value'));
 set(handles.box_elementid,'String',num2str(id));
-% ejecuto el callback de ese box para que guarde los nmeros
+% ejecuto el callback de ese box para que guarde los números
 box_elementid_Callback(hObject, eventdata, handles)
 % Hints: get(hObject,'Value') returns position of slider
 %        get(hObject,'Min') and get(hObject,'Max') to determine range of slider
@@ -990,7 +990,7 @@ else
         rmrb=planos(id,3);
     else
         if get(handles.radiobutton_wedge,'Value')==1
-            % es una cua
+            % es una cuña
             wedges=get(handles.uitable_wedges,'Data');
             alphaj=wedges(id,3);
             betaj=wedges(id,4);
@@ -1054,7 +1054,7 @@ fprintf(fileID,'\\usepackage{amsmath,amsthm} \n');
 fprintf(fileID,'\\usepackage{amsfonts} \n');
 fprintf(fileID,'\\usepackage{amssymb} \n');
 fprintf(fileID,'\\usepackage{latexsym} \n');
-fprintf(fileID,'\\usepackage{gensymb} %para poner el smbolo de grados \n');
+fprintf(fileID,'\\usepackage{gensymb} %para poner el símbolo de grados \n');
 fprintf(fileID,'\\setlength{\\oddsidemargin}{-2mm} \n');
 fprintf(fileID,'\\begin{document} \n');
 fprintf(fileID,'\\begin{table} \\begin{scriptsize} \n');	
@@ -1090,7 +1090,7 @@ for i=1:n
     end
 	fprintf(fileID,['$J_', num2str(i), '$ & ', num2str(round(alphaj)), ' & ', num2str(round(betaj)),' & ',num2str(round(rmrb)),' & ',num2str(Acoeff1),' & ',num2str(betaj),' & ',num2str(Ccoeff3),' & ',tiporotura,' & ',num2str(coeff1),' & ', num2str(coeff2),' & ',num2str(coeff3),' & ',num2str(coeff4),' & ',num2str(SMRRomana),' & ',classsmr,' \\\\ \n']);	
 end
-% preparo las cuas
+% preparo las cuñas
 wedges=get(handles.uitable_wedges,'Data');
 [n,~]=size(wedges);
 for i=1:n
@@ -1111,7 +1111,7 @@ for i=1:n
 	SMRRomana = min(SMRRomana,100);
 	[ classsmr, description, stability, failures, support ] = f_classsmr( SMRRomana);
 	if strcmp(tiporotura,'Toppling')
-        % no hago nada porque la cua no se puede producir
+        % no hago nada porque la cuña no se puede producir
     else
         % guardo los datos
         tiporotura = 'Wedge';

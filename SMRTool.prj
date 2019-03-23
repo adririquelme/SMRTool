@@ -1,5 +1,5 @@
 <deployment-project plugin="plugin.ezdeploy" plugin-version="1.0">
-  <configuration build-checksum="3845069266" file="D:\Users\Adri\Google\Github\SMRTool\SMRTool.prj" location="D:\Users\Adri\Google\Github\SMRTool" name="SMRTool" preferred-package-location="D:\adrir\Google Drive\Github\SMRTool\SMRTool\for_redistribution" preferred-package-type="package.type.exe" target="target.ezdeploy.standalone" target-name="Application Compiler">
+  <configuration build-checksum="3845069266" file="D:\adrir\Google Drive\Github\SMRTool\SMRTool.prj" location="D:\adrir\Google Drive\Github\SMRTool" name="SMRTool" preferred-package-location="D:\adrir\Google Drive\Github\SMRTool\SMRTool\for_redistribution" preferred-package-type="package.type.exe" target="target.ezdeploy.standalone" target-name="Application Compiler">
     <param.appname>SMRTool</param.appname>
     <param.icon />
     <param.icons />
@@ -7,7 +7,8 @@
     <param.authnamewatermark>SMRTool</param.authnamewatermark>
     <param.email>ariquelme@ua.es</param.email>
     <param.company>University of Alicante</param.company>
-    <param.summary>SMRTool v 2.07</param.summary>
+    <param.summary>SMRTool for Winows. Version 2.07 beta
+March 2019</param.summary>
     <param.description>A tool for the calculation of the Slope Mass Rating index.</param.description>
     <param.screenshot>${PROJECT_ROOT}\img\SMRTool_logo_v02.png</param.screenshot>
     <param.guid />
@@ -40,6 +41,7 @@
     <unset>
       <param.icon />
       <param.icons />
+      <param.email />
       <param.company />
       <param.guid />
       <param.installpath.string />
@@ -68,7 +70,7 @@
       <param.help.text />
     </unset>
     <fileset.main>
-      <file>${PROJECT_ROOT}\SMRTool_v207.m</file>
+      <file>${PROJECT_ROOT}\SMRTool_v207_win.m</file>
     </fileset.main>
     <fileset.resources>
       <file>${PROJECT_ROOT}\img</file>
@@ -92,13 +94,13 @@
       <file>${PROJECT_ROOT}\swap.m</file>
     </fileset.depfun>
     <build-deliverables>
-      <file location="${PROJECT_ROOT}\SMRTool\for_testing" name="SMRTool.exe" optional="false">D:\Users\Adri\Google\Github\SMRTool\SMRTool\for_testing\SMRTool.exe</file>
-      <file location="${PROJECT_ROOT}\SMRTool\for_testing" name="splash.png" optional="false">D:\Users\Adri\Google\Github\SMRTool\SMRTool\for_testing\splash.png</file>
-      <file location="${PROJECT_ROOT}\SMRTool\for_testing" name="readme.txt" optional="true">D:\Users\Adri\Google\Github\SMRTool\SMRTool\for_testing\readme.txt</file>
+      <file location="${PROJECT_ROOT}\SMRTool\for_testing" name="SMRTool.exe" optional="false">D:\adrir\Google Drive\Github\SMRTool\SMRTool\for_testing\SMRTool.exe</file>
+      <file location="${PROJECT_ROOT}\SMRTool\for_testing" name="readme.txt" optional="true">D:\adrir\Google Drive\Github\SMRTool\SMRTool\for_testing\readme.txt</file>
+      <file location="${PROJECT_ROOT}\SMRTool\for_testing" name="splash.png" optional="false">D:\adrir\Google Drive\Github\SMRTool\SMRTool\for_testing\splash.png</file>
     </build-deliverables>
     <workflow />
     <matlab>
-      <root>C:\Program Files\MATLAB\R2017b</root>
+      <root>D:\Program Files\MATLAB\R2017b</root>
       <toolboxes>
         <toolbox name="fixedpoint" />
         <toolbox name="matlabcoder" />
