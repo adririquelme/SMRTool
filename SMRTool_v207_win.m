@@ -577,7 +577,7 @@ Ys=[0 sin(pi/2-alphas/180*pi)];
 % dibujo la discontinuidad
 Xj=[0 cos(pi/2-alphaj/180*pi)];
 Yj=[0 sin(pi/2-alphaj/180*pi)];
-g=plot(handles.axes1,Xs,Ys,Xj,Yj);
+g=plot(handles.axes1,Xs,Ys,'b',Xj,Yj,'r');
 set(g(1),'LineWidth',1.5);
 set(g(2),'LineWidth',1.5);
 handles.axes1.Title.Visible='on';
@@ -597,7 +597,9 @@ Xs=[-H/2 0 xinterseccion (xinterseccion+H/2)];
 Ys=[0 0 H H];
 xincdisc = H/(2*tan(betaj/180*pi));
 alpha=atan(H/(xinterseccion+H))*180/pi;
-if abs(alphas-alphaj)<90
+[ tiporotura ] = f_tiporotura( alphas, alphaj );
+% if abs(alphas-alphaj)<90
+if isequal(tiporotura,'Wedge/Planar')
     if betaj>betas
         Xj = [xinterseccion/2 (xinterseccion/2-xincdisc)];
         Yj = [H/2 0];
@@ -621,7 +623,7 @@ else
 end
 % dibujamos la figura
 cla(handles.axes2,'reset'); %limpio primero la casa
-g=plot(handles.axes2,Xs,Ys,Xj,Yj);
+g=plot(handles.axes2,Xs,Ys,'b',Xj,Yj,'r');
 set(g(1),'LineWidth',1.5);
 set(g(2),'LineWidth',1.5);
 axis(handles.axes2,'square','equal');

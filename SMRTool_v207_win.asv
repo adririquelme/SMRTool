@@ -1,4 +1,4 @@
-function varargout = SMRTool_v207_win_temp(varargin)
+function varargout = SMRTool_v207_win(varargin)
 %    Copyright (C) {2015}  {Adrián Riquelme Guill, adririquelme@gmail.com}
 %
 %    This program is free software; you can redistribute it and/or modify
@@ -14,41 +14,41 @@ function varargout = SMRTool_v207_win_temp(varargin)
 %    You should have received a copy of the GNU General Public License along
 %   with this program; if not, write to the Free Software Foundation, Inc.,
 %   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
-%    SMRTool_v207_win_temp, Copyright (C) 2015 Adrián Riquelme Guill
-%    SMRTool_v207_win_temp comes with ABSOLUTELY NO WARRANTY.
+%    SMRTool_v207_win, Copyright (C) 2015 Adrián Riquelme Guill
+%    SMRTool_v207_win comes with ABSOLUTELY NO WARRANTY.
 %    This is free software, and you are welcome to redistribute it
 %    under certain conditions.
-% SMRTOOL_V207_WIN_TEMP MATLAB code for SMRTool_v207_win_temp.fig
-%      SMRTOOL_V207_WIN_TEMP, by itself, creates a new SMRTOOL_V207_WIN_TEMP or raises the existing
+% SMRTOOL_V207_WIN MATLAB code for SMRTool_v207_win.fig
+%      SMRTOOL_V207_WIN, by itself, creates a new SMRTOOL_V207_WIN or raises the existing
 %      singleton*.
 %
-%      H = SMRTOOL_V207_WIN_TEMP returns the handle to a new SMRTOOL_V207_WIN_TEMP or the handle to
+%      H = SMRTOOL_V207_WIN returns the handle to a new SMRTOOL_V207_WIN or the handle to
 %      the existing singleton*.
 %
-%      SMRTOOL_V207_WIN_TEMP('CALLBACK',hObject,eventData,handles,...) calls the local
-%      function named CALLBACK in SMRTOOL_V207_WIN_TEMP.M with the given input arguments.
+%      SMRTOOL_V207_WIN('CALLBACK',hObject,eventData,handles,...) calls the local
+%      function named CALLBACK in SMRTOOL_V207_WIN.M with the given input arguments.
 %
-%      SMRTOOL_V207_WIN_TEMP('Property','Value',...) creates a new SMRTOOL_V207_WIN_TEMP or raises the
+%      SMRTOOL_V207_WIN('Property','Value',...) creates a new SMRTOOL_V207_WIN or raises the
 %      existing singleton*.  Starting from the left, property value pairs are
-%      applied to the GUI before SMRTool_v207_win_temp_OpeningFcn gets called.  An
+%      applied to the GUI before SMRTool_v207_win_OpeningFcn gets called.  An
 %      unrecognized property name or invalid value makes property application
-%      stop.  All inputs are passed to SMRTool_v207_win_temp_OpeningFcn via varargin.
+%      stop.  All inputs are passed to SMRTool_v207_win_OpeningFcn via varargin.
 %
 %      *See GUI Options on GUIDE's Tools menu.  Choose "GUI allows only one
 %      instance to run (singleton)".
 %
 % See also: GUIDE, GUIDATA, GUIHANDLES
 
-% Edit the above text to modify the response to help SMRTool_v207_win_temp
+% Edit the above text to modify the response to help SMRTool_v207_win
 
-% Last Modified by GUIDE v2.5 23-Mar-2019 19:03:15
+% Last Modified by GUIDE v2.5 23-Mar-2019 19:31:45
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
 gui_State = struct('gui_Name',       mfilename, ...
                    'gui_Singleton',  gui_Singleton, ...
-                   'gui_OpeningFcn', @SMRTool_v207_win_temp_OpeningFcn, ...
-                   'gui_OutputFcn',  @SMRTool_v207_win_temp_OutputFcn, ...
+                   'gui_OpeningFcn', @SMRTool_v207_win_OpeningFcn, ...
+                   'gui_OutputFcn',  @SMRTool_v207_win_OutputFcn, ...
                    'gui_LayoutFcn',  [] , ...
                    'gui_Callback',   []);
 if nargin && ischar(varargin{1})
@@ -63,15 +63,15 @@ end
 % End initialization code - DO NOT EDIT
 
 
-% --- Executes just before SMRTool_v207_win_temp is made visible.
-function SMRTool_v207_win_temp_OpeningFcn(hObject, eventdata, handles, varargin)
+% --- Executes just before SMRTool_v207_win is made visible.
+function SMRTool_v207_win_OpeningFcn(hObject, eventdata, handles, varargin)
 % This function has no output args, see OutputFcn.
 % hObject    handle to figure
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
-% varargin   command line arguments to SMRTool_v207_win_temp (see VARARGIN)
+% varargin   command line arguments to SMRTool_v207_win (see VARARGIN)
 
-% Choose default command line output for SMRTool_v207_win_temp
+% Choose default command line output for SMRTool_v207_win
 handles.output = hObject;
 
 % cargo las imágenes
@@ -86,12 +86,12 @@ set(handles.pushbutton_movedown,'cdata',A);
 % Update handles structure
 guidata(hObject, handles);
 
-% UIWAIT makes SMRTool_v207_win_temp wait for user response (see UIRESUME)
+% UIWAIT makes SMRTool_v207_win wait for user response (see UIRESUME)
 % uiwait(handles.figure1);
 
 
 % --- Outputs from this function are returned to the command line.
-function varargout = SMRTool_v207_win_temp_OutputFcn(hObject, eventdata, handles) 
+function varargout = SMRTool_v207_win_OutputFcn(hObject, eventdata, handles) 
 % varargout  cell array for returning output args (see VARARGOUT);
 % hObject    handle to figure
 % eventdata  reserved - to be defined in a future version of MATLAB
@@ -577,14 +577,12 @@ Ys=[0 sin(pi/2-alphas/180*pi)];
 % dibujo la discontinuidad
 Xj=[0 cos(pi/2-alphaj/180*pi)];
 Yj=[0 sin(pi/2-alphaj/180*pi)];
-g=plot(handles.axes1,Xs,Ys,Xj,Yj);
+g=plot(handles.axes1,Xs,Ys,'b',Xj,Yj,'r');
 set(g(1),'LineWidth',1.5);
 set(g(2),'LineWidth',1.5);
 handles.axes1.Title.Visible='on';
 handles.axes1.Title.String=['Dip directions of {\color{blue}slope} and {\color{red}discontinuity}'];
-% legend('Slope','Discontinuity');
-% hleg1 = legend(g,'Slope','Discontinuity');
-% set(hleg1,'Location','BestOutside','FontSize',10);
+
 
 function dibujacroquis_Callback(hObject, eventdata, handles)
 % Primero tomo los datos
@@ -599,7 +597,9 @@ Xs=[-H/2 0 xinterseccion (xinterseccion+H/2)];
 Ys=[0 0 H H];
 xincdisc = H/(2*tan(betaj/180*pi));
 alpha=atan(H/(xinterseccion+H))*180/pi;
-if abs(alphas-alphaj)<90
+[ tiporotura ] = f_tiporotura( alphas, alphaj );
+% if abs(alphas-alphaj)<90
+if tiporotura == 'Wedge/Planar'
     if betaj>betas
         Xj = [xinterseccion/2 (xinterseccion/2-xincdisc)];
         Yj = [H/2 0];
@@ -621,10 +621,9 @@ else
         Yj = [H/2 0];
     end
 end
-
 % dibujamos la figura
 cla(handles.axes2,'reset'); %limpio primero la casa
-g=plot(handles.axes2,Xs,Ys,Xj,Yj);
+g=plot(handles.axes2,Xs,Ys,'b',Xj,Yj,'r');
 set(g(1),'LineWidth',1.5);
 set(g(2),'LineWidth',1.5);
 axis(handles.axes2,'square','equal');

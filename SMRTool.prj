@@ -1,5 +1,5 @@
 <deployment-project plugin="plugin.ezdeploy" plugin-version="1.0">
-  <configuration build-checksum="3845069266" file="D:\adrir\Google Drive\Github\SMRTool\SMRTool.prj" location="D:\adrir\Google Drive\Github\SMRTool" name="SMRTool" preferred-package-location="D:\adrir\Google Drive\Github\SMRTool\SMRTool\for_redistribution" preferred-package-type="package.type.exe" target="target.ezdeploy.standalone" target-name="Application Compiler">
+  <configuration file="D:\Users\Adri\Google\Github\SMRTool\SMRTool.prj" location="D:\Users\Adri\Google\Github\SMRTool" name="SMRTool" target="target.ezdeploy.standalone" target-name="Application Compiler">
     <param.appname>SMRTool</param.appname>
     <param.icon />
     <param.icons />
@@ -7,9 +7,8 @@
     <param.authnamewatermark>SMRTool</param.authnamewatermark>
     <param.email>ariquelme@ua.es</param.email>
     <param.company>University of Alicante</param.company>
-    <param.summary>SMRTool for Winows. Version 2.07 beta
-March 2019</param.summary>
-    <param.description>A tool for the calculation of the Slope Mass Rating index.</param.description>
+    <param.summary />
+    <param.description />
     <param.screenshot>${PROJECT_ROOT}\img\SMRTool_logo_v02.png</param.screenshot>
     <param.guid />
     <param.installpath.string>\University of Alicante\SMRTool\</param.installpath.string>
@@ -28,7 +27,7 @@ March 2019</param.summary>
     <param.web.mcr>true</param.web.mcr>
     <param.package.mcr>false</param.package.mcr>
     <param.no.mcr>false</param.no.mcr>
-    <param.web.mcr.name>SMRTool207</param.web.mcr.name>
+    <param.web.mcr.name>MyAppInstaller_web</param.web.mcr.name>
     <param.package.mcr.name>MyAppInstaller_mcr</param.package.mcr.name>
     <param.no.mcr.name>MyAppInstaller_app</param.no.mcr.name>
     <param.windows.command.prompt>true</param.windows.command.prompt>
@@ -41,12 +40,16 @@ March 2019</param.summary>
     <unset>
       <param.icon />
       <param.icons />
+      <param.authnamewatermark />
       <param.email />
       <param.company />
+      <param.summary />
+      <param.description />
       <param.guid />
       <param.installpath.string />
       <param.installpath.combo />
       <param.logo />
+      <param.install.notes />
       <param.target.install.notes />
       <param.intermediate />
       <param.files.only />
@@ -59,6 +62,7 @@ March 2019</param.summary>
       <param.web.mcr />
       <param.package.mcr />
       <param.no.mcr />
+      <param.web.mcr.name />
       <param.package.mcr.name />
       <param.no.mcr.name />
       <param.windows.command.prompt />
@@ -88,41 +92,35 @@ March 2019</param.summary>
       <file>${PROJECT_ROOT}\f_coeff3.m</file>
       <file>${PROJECT_ROOT}\f_coeff3tomas.m</file>
       <file>${PROJECT_ROOT}\f_tiporotura.m</file>
+      <file>${PROJECT_ROOT}\gui_about.fig</file>
       <file>${PROJECT_ROOT}\gui_about.m</file>
+      <file>${PROJECT_ROOT}\gui_wedgescalculator.fig</file>
       <file>${PROJECT_ROOT}\gui_wedgescalculator.m</file>
       <file>${PROJECT_ROOT}\Report.tex</file>
+      <file>${PROJECT_ROOT}\SMRTool_v207_win.fig</file>
       <file>${PROJECT_ROOT}\swap.m</file>
     </fileset.depfun>
     <build-deliverables>
-      <file location="${PROJECT_ROOT}\SMRTool\for_testing" name="SMRTool.exe" optional="false">D:\adrir\Google Drive\Github\SMRTool\SMRTool\for_testing\SMRTool.exe</file>
-      <file location="${PROJECT_ROOT}\SMRTool\for_testing" name="readme.txt" optional="true">D:\adrir\Google Drive\Github\SMRTool\SMRTool\for_testing\readme.txt</file>
-      <file location="${PROJECT_ROOT}\SMRTool\for_testing" name="splash.png" optional="false">D:\adrir\Google Drive\Github\SMRTool\SMRTool\for_testing\splash.png</file>
+      <file location="${PROJECT_ROOT}\SMRTool\for_testing" name="SMRTool.exe" optional="false">D:\Users\Adri\Google\Github\SMRTool\SMRTool\for_testing\SMRTool.exe</file>
+      <file location="${PROJECT_ROOT}\SMRTool\for_testing" name="splash.png" optional="false">D:\Users\Adri\Google\Github\SMRTool\SMRTool\for_testing\splash.png</file>
+      <file location="${PROJECT_ROOT}\SMRTool\for_testing" name="readme.txt" optional="true">D:\Users\Adri\Google\Github\SMRTool\SMRTool\for_testing\readme.txt</file>
     </build-deliverables>
     <workflow />
     <matlab>
-      <root>D:\Program Files\MATLAB\R2017b</root>
+      <root>C:\Program Files\MATLAB\R2018b</root>
       <toolboxes>
-        <toolbox name="fixedpoint" />
         <toolbox name="matlabcoder" />
-        <toolbox name="matlabhdlcoder" />
         <toolbox name="embeddedcoder" />
         <toolbox name="gpucoder" />
+        <toolbox name="fixedpoint" />
+        <toolbox name="matlabhdlcoder" />
         <toolbox name="polyspacebugfinder" />
+        <toolbox name="neuralnetwork" />
       </toolboxes>
-      <toolbox>
-        <fixedpoint>
-          <enabled>true</enabled>
-        </fixedpoint>
-      </toolbox>
       <toolbox>
         <matlabcoder>
           <enabled>true</enabled>
         </matlabcoder>
-      </toolbox>
-      <toolbox>
-        <matlabhdlcoder>
-          <enabled>true</enabled>
-        </matlabhdlcoder>
       </toolbox>
       <toolbox>
         <embeddedcoder>
@@ -135,9 +133,24 @@ March 2019</param.summary>
         </gpucoder>
       </toolbox>
       <toolbox>
+        <fixedpoint>
+          <enabled>true</enabled>
+        </fixedpoint>
+      </toolbox>
+      <toolbox>
+        <matlabhdlcoder>
+          <enabled>true</enabled>
+        </matlabhdlcoder>
+      </toolbox>
+      <toolbox>
         <polyspacebugfinder>
           <enabled>true</enabled>
         </polyspacebugfinder>
+      </toolbox>
+      <toolbox>
+        <neuralnetwork>
+          <enabled>true</enabled>
+        </neuralnetwork>
       </toolbox>
     </matlab>
     <platform>
